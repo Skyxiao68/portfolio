@@ -98,10 +98,10 @@ const navHTML = `
 
       <!-- Desktop navigation -->
       <ul class="nav-links desktop-nav">
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/pages/projects.html">Projects</a></li>
-        <li><a href="/pages/about.html">About</a></li>
-        <li><a href="/pages/contact.html">Contact</a></li>
+        <li><a href="/portfolio/index.html">Home</a></li>
+        <li><a href="/portfolio/pages/projects.html">Projects</a></li>
+        <li><a href="/portfolio/pages/about.html">About</a></li>
+        <li><a href="/portfolio/pages/contact.html">Contact</a></li>
       </ul>
 
       <div class="nav-actions">
@@ -117,10 +117,10 @@ const navHTML = `
     <!-- Mobile menu panel -->
     <div class="mobile-menu" id="mobileMenu">
       <ul class="mobile-nav-links">
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/pages/projects.html">Projects</a></li>
-        <li><a href="/pages/about.html">About</a></li>
-        <li><a href="/pages/contact.html">Contact</a></li>
+        <li><a href="/portfolio/index.html">Home</a></li>
+        <li><a href="/portfolio/pages/projects.html">Projects</a></li>
+        <li><a href="/portfolio/pages/about.html">About</a></li>
+        <li><a href="/portfolio/pages/contact.html">Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -139,8 +139,8 @@ function setActiveNavLink() {
     const href = link.getAttribute("href");
     if (
       href === currentPath ||
-      ((currentPath === "/" || currentPath === "/index.html") &&
-        href === "/index.html")
+      ((currentPath === "/" || currentPath === "/portfolio/index.html") &&
+        href === "/portfolio/index.html")
     ) {
       link.classList.add("active");
     } else {
