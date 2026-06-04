@@ -5,7 +5,7 @@ const projectsData = [
     title: "Personal Portfolio Website",
     description:
       "A responsive portfolio site built with semantic HTML5 and modern CSS. Features clean structure and accessible markup.",
-    image: "/assets/images/project-1.jpg",
+    image: "/portfolio/assets/images/project-1.jpg",
     category: "HTML",
     tags: ["HTML", "CSS"],
     liveUrl: "#",
@@ -16,7 +16,7 @@ const projectsData = [
     title: "Interactive Storytelling Experience",
     description:
       "A branching narrative website exploring user choice and nonlinear storytelling. Built with HTML, CSS, and JavaScript.",
-    image: "/assets/images/project-2.jpg",
+    image: "/portfolio/assets/images/project-2.jpg",
     category: "JavaScript",
     tags: ["JavaScript", "HTML", "CSS"],
     liveUrl: "#",
@@ -27,7 +27,7 @@ const projectsData = [
     title: "Unity Puzzle Prototype",
     description:
       "A 2D puzzle game prototype with interactive mechanics, level design, and player progression. Made with Unity and C#.",
-    image: "/assets/images/project-3.jpg",
+    image: "/portfolio/assets/images/project-3.jpg",
     category: "Game",
     tags: ["Unity", "C#", "Game Design"],
     liveUrl: "#",
@@ -38,7 +38,7 @@ const projectsData = [
     title: "Digital Museum Exhibit",
     description:
       "An interactive web exhibit for a fictional museum, combining multimedia content and user navigation.",
-    image: "/assets/images/project-4.jpg",
+    image: "/portfolio/assets/images/project-4.jpg",
     category: "HTML",
     tags: ["HTML", "CSS", "JavaScript"],
     liveUrl: "#",
@@ -49,7 +49,7 @@ const projectsData = [
     title: "Environmental Recycling Game",
     description:
       "An arcade‑style game teaching waste sorting and recycling through interactive challenges and decision‑making scenarios. Built with HTML, CSS, and JavaScript.",
-    image: "/assets/images/project-5.jpg",
+    image: "/portfolio/assets/images/project-5.jpg",
     category: "Game",
     tags: ["HTML", "CSS", "JavaScript", "Game Design"],
     liveUrl: "#",
@@ -60,7 +60,7 @@ const projectsData = [
     title: "Event Website",
     description:
       "A responsive information site for hobby events, featuring a dynamic schedule and RSVP form.",
-    image: "/assets/images/project-6.jpg",
+    image: "/portfolio/assets/images/project-6.jpg",
     category: "HTML",
     tags: ["HTML", "CSS", "JavaScript"],
     liveUrl: "#",
@@ -71,7 +71,7 @@ const projectsData = [
     title: "Mobile UX Prototype",
     description:
       "A high‑fidelity Figma prototype for a fitness app, including user flows, wireframes, and interactive components.",
-    image: "/assets/images/project-7.jpg",
+    image: "/portfolio/assets/images/project-7.jpg",
     category: "Design",
     tags: ["Figma", "UX Design", "Wireframing"],
     liveUrl: "#",
@@ -82,7 +82,7 @@ const projectsData = [
     title: "Interactive Data Visualisation Dashboard",
     description:
       "A responsive dashboard that visualises sale performance data using Chart.js. Focuses on making complex information accessible and engaging.",
-    image: "/assets/images/project-8.jpg",
+    image: "/portfolio/assets/images/project-8.jpg",
     category: "JavaScript",
     tags: ["JavaScript", "Chart.js", "HTML", "CSS"],
     liveUrl: "#",
