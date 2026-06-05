@@ -94,7 +94,7 @@ const projectsData = [
 const navHTML = `
   <nav class="main-nav">
     <div class="container nav-container">
-      <div class="logo"><a href="/index.html">Ben Lai</a></div>
+      <div class="logo"><a href="/portfolio/index.html">Ben Lai</a></div>
 
       <!-- Desktop navigation -->
       <ul class="nav-links desktop-nav">
