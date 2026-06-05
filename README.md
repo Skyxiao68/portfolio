@@ -6,7 +6,7 @@ Vanilla HTML/CSS/JS portfolio website.
 - `index.html` – home page
 - `pages/` – projects, about, contact
 - `css/` – all styles
-- `js/` – all JavaScript (navigation, theme, filtering, form)
+- `js/` – all JavaScript 
 - `assets/images/` – image assets
 - `assets/icons/` – icon assets
 - `README.md` – this file
