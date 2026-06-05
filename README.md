@@ -8,9 +8,13 @@ Vanilla HTML/CSS/JS portfolio website.
 - `css/` – all styles
 - `js/` – all JavaScript (navigation, theme, filtering, form)
 - `assets/images/` – image assets
+- `assets/icons/` – icon assets
+- `README.md` – this file
 
-## How to Run
-Open `index.html` in any modern browser (Chrome, Firefox, Edge). No build step needed.
+## Technologies
+- HTML5
+- CSS3
+- JavaScript
 
 ## Features
 - JS‑driven navigation (injected once)
@@ -22,3 +26,6 @@ Open `index.html` in any modern browser (Chrome, Firefox, Edge). No build step n
 
 ## Credits
 Built by Ben Lai for Interactive Media portfolio.
+Icons by Icons8 (https://icons8.com/icons)
+Website inspriation by webdesign https://www.webdesign-inspiration.com/
+Code inspiration by W3Schools|Mozilla https://www.w3school.com.cn/ https://developer.mozilla.org/zh-CN/
