@@ -8,6 +8,7 @@
       content="Ben Lai – Interactive Media & Game Design student at Wits. Portfolio showcasing web development, game design, and interactive projects."
     />
     <title>Ben Lai | Home</title>
+    <!-- Google Fonts for a modern look -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,10 +18,11 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- This empty div will be filled with the navigation bar by JavaScript -->
     <div id="nav-placeholder"></div>
 
     <main>
-      <!-- Hero -->
+      <!-- Hero section -->
       <section class="hero">
         <div class="container">
           <div class="hero-content">
@@ -42,8 +44,54 @@
               >
             </div>
             <div class="tech-stack">
-              <span>HTML</span><span>CSS</span><span>JavaScript</span>
-              <span>Unity</span><span>C#</span><span>Figma</span>
+              <div class="tech-item">
+                <img
+                  src="assets/icons/html-logo.png"
+                  alt="HTML logo"
+                  class="tech-logo"
+                />
+                <span>HTML</span>
+              </div>
+              <div class="tech-item">
+                <img
+                  src="assets/icons/css-logo.png"
+                  alt="CSS logo"
+                  class="tech-logo"
+                />
+                <span>CSS</span>
+              </div>
+              <div class="tech-item">
+                <img
+                  src="assets/icons/js-logo.png"
+                  alt="JavaScript logo"
+                  class="tech-logo"
+                />
+                <span>JavaScript</span>
+              </div>
+              <div class="tech-item">
+                <img
+                  src="assets/icons/unity-logo.png"
+                  alt="Unity logo"
+                  class="tech-logo"
+                />
+                <span>Unity</span>
+              </div>
+              <div class="tech-item">
+                <img
+                  src="assets/icons/csharp-logo.png"
+                  alt="C# logo"
+                  class="tech-logo"
+                />
+                <span>C#</span>
+              </div>
+              <div class="tech-item">
+                <img
+                  src="assets/icons/figma-logo.png"
+                  alt="Figma logo"
+                  class="tech-logo"
+                />
+                <span>Figma</span>
+              </div>
             </div>
           </div>
           <div class="hero-image">
@@ -57,7 +105,7 @@
         <div class="scroll-indicator">↓</div>
       </section>
 
-      <!-- About Preview -->
+      <!-- About preview – a short version of the About page -->
       <section class="about-preview">
         <div class="container">
           <h2>About Me</h2>
@@ -77,43 +125,68 @@
         </div>
       </section>
 
-      <!-- Skills -->
+      <!-- Skills section –  -->
       <section class="skills">
         <div class="container">
           <h2>Technical & Creative Skills</h2>
           <p class="section-subtitle">What I bring to every project</p>
           <div class="skills-grid">
+            <!-- Each skill card uses an emoji as an icon -->
             <div class="skill-card">
-              <div class="skill-icon">💻</div>
+              <img
+                src="assets/icons/web-dev.png"
+                alt="Web Development icon"
+                class="skill-icon-img"
+              />
               <h3>Web Development</h3>
               <p>HTML, CSS, JavaScript, responsive design and accessibility.</p>
             </div>
             <div class="skill-card">
-              <div class="skill-icon">🎮</div>
+              <img
+                src="assets/icons/game-dev.png"
+                alt="Game Development icon"
+                class="skill-icon-img"
+              />
               <h3>Game Development</h3>
               <p>Unity, C#, gameplay systems and prototyping.</p>
             </div>
             <div class="skill-card">
-              <div class="skill-icon">🎨</div>
+              <img
+                src="assets/icons/ui-ux.png"
+                alt="UI/UX Design icon"
+                class="skill-icon-img"
+              />
               <h3>UI/UX Design</h3>
               <p>
                 User‑centred interfaces, wireframes and usability principles.
               </p>
             </div>
             <div class="skill-card">
-              <div class="skill-icon">🖌️</div>
+              <img
+                src="assets/icons/creative-software.png"
+                alt="Creative Software icon"
+                class="skill-icon-img"
+              />
               <h3>Creative Software</h3>
               <p>Photoshop, Illustrator, Figma and digital design workflows.</p>
             </div>
             <div class="skill-card">
-              <div class="skill-icon">📚</div>
+              <img
+                src="assets/icons/interactive-media.png"
+                alt="Interactive Media icon"
+                class="skill-icon-img"
+              />
               <h3>Interactive Media</h3>
               <p>
                 Storytelling, information architecture and multimedia design.
               </p>
             </div>
             <div class="skill-card">
-              <div class="skill-icon">🤝</div>
+              <img
+                src="assets/icons/collaboration.png"
+                alt="Collaboration icon"
+                class="skill-icon-img"
+              />
               <h3>Collaboration</h3>
               <p>Team projects, documentation and version control.</p>
             </div>
@@ -121,7 +194,7 @@
         </div>
       </section>
 
-      <!-- Current Focus -->
+      <!-- Current focus  -->
       <section class="current-focus">
         <div class="container">
           <h2>What I'm Currently Exploring</h2>
@@ -155,7 +228,7 @@
         </div>
       </section>
 
-      <!-- Academic Project Highlights -->
+      <!-- Academic projects –  -->
       <section class="academic-projects">
         <div class="container">
           <h2>Academic Project Highlights</h2>
@@ -185,7 +258,7 @@
         </div>
       </section>
 
-      <!-- Design Philosophy -->
+      <!-- My design philosophy  -->
       <section class="philosophy">
         <div class="container">
           <h2>My Design Philosophy</h2>
@@ -203,13 +276,14 @@
         </div>
       </section>
 
-      <!-- Featured Projects (populated by JS) -->
+      <!-- Featured projects  (filled by JavaScript) -->
       <section class="featured">
         <div class="container">
           <div class="section-header">
             <h2>Featured Projects</h2>
             <a href="pages/projects.html" class="view-all">View All →</a>
           </div>
+          <!-- This empty div will be filled with project cards by JavaScript -->
           <div class="project-grid" id="featured-grid"></div>
           <div class="mobile-view-all">
             <a href="pages/projects.html" class="btn-outline">All Projects →</a>
@@ -217,7 +291,7 @@
         </div>
       </section>
 
-      <!-- Education Snapshot -->
+      <!-- Education snapshot -->
       <section class="education-preview">
         <div class="container">
           <h2>Education</h2>
@@ -232,7 +306,7 @@
         </div>
       </section>
 
-      <!-- CTA -->
+      <!-- Call to action  -->
       <section class="cta">
         <div class="container">
           <h2>Let's Work Together</h2>
@@ -245,6 +319,7 @@
       </section>
     </main>
 
+    <!-- Footer with copyright and social links -->
     <footer>
       <div class="container">
         <div class="footer-info">
@@ -264,7 +339,7 @@
               aria-label="GitHub"
             >
               <img
-                src="assets/images/icons8-github-50.png"
+                src="assets/icons/github-icon.png"
                 alt="GitHub"
                 class="social-icon-img"
               />
@@ -276,7 +351,7 @@
               aria-label="LinkedIn"
             >
               <img
-                src="assets/images/icons8-linkedin-50.png"
+                src="assets/icons/linkedin-icon.png"
                 alt="LinkedIn"
                 class="social-icon-img"
               />
@@ -290,6 +365,7 @@
       </div>
     </footer>
 
+    <!-- Link to my JavaScript file  -->
     <script src="js/script.js"></script>
   </body>
 </html>

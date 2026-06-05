@@ -15,9 +15,11 @@
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
+    <!-- This empty div will be filled with the navigation bar by JavaScript -->
     <div id="nav-placeholder"></div>
 
     <main>
+      <!-- PAGE HEADER  -->
       <section class="page-header">
         <div class="container">
           <span class="section-label">Portfolio</span>
@@ -30,13 +32,17 @@
         </div>
       </section>
 
+      <!-- FILTER SECTION – dynamic filter buttons and project grid (both filled by JavaScript) -->
       <section class="filter-section">
         <div class="container">
+          <!-- Empty div: script.js will insert category buttons here -->
           <div class="filter-buttons" id="filter-buttons"></div>
+          <!-- Empty grid: script.js will render project cards here -->
           <div class="project-grid" id="projects-grid"></div>
         </div>
       </section>
 
+      <!-- FEATURED PROJECT -->
       <section class="featured-project">
         <div class="container">
           <span class="section-label">Featured Project</span>
@@ -70,6 +76,7 @@
         </div>
       </section>
 
+      <!-- PROJECT CATEGORIES  -->
       <section class="project-categories">
         <div class="container">
           <h2>Areas of Work</h2>
@@ -99,6 +106,7 @@
         </div>
       </section>
 
+      <!-- DEVELOPMENT PROCESS  -->
       <section class="development-process">
         <div class="container">
           <h2>My Development Process</h2>
@@ -132,17 +140,88 @@
         </div>
       </section>
 
+      <!-- TECHNOLOGIES & TOOLS  -->
       <section class="technologies">
         <div class="container">
           <h2>Technologies & Tools</h2>
           <div class="tech-list">
-            <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
-            <span>Unity</span><span>C#</span><span>Figma</span> <span>Git</span
-            ><span>Adobe Photoshop</span><span>Adobe Illustrator</span>
+            <div class="tech-item">
+              <img
+                src="../assets/icons/html-logo.png"
+                alt="HTML5 logo"
+                class="tech-logo"
+              />
+              <span>HTML5</span>
+            </div>
+            <div class="tech-item">
+              <img
+                src="../assets/icons/css-logo.png"
+                alt="CSS3 logo"
+                class="tech-logo"
+              />
+              <span>CSS3</span>
+            </div>
+            <div class="tech-item">
+              <img
+                src="../assets/icons/js-logo.png"
+                alt="JavaScript logo"
+                class="tech-logo"
+              />
+              <span>JavaScript</span>
+            </div>
+            <div class="tech-item">
+              <img
+                src="../assets/icons/unity-logo.png"
+                alt="Unity logo"
+                class="tech-logo"
+              />
+              <span>Unity</span>
+            </div>
+            <div class="tech-item">
+              <img
+                src="../assets/icons/csharp-logo.png"
+                alt="C# logo"
+                class="tech-logo"
+              />
+              <span>C#</span>
+            </div>
+            <div class="tech-item">
+              <img
+                src="../assets/icons/figma-logo.png"
+                alt="Figma logo"
+                class="tech-logo"
+              />
+              <span>Figma</span>
+            </div>
+            <div class="tech-item">
+              <img
+                src="../assets/icons/git-logo.png"
+                alt="Git logo"
+                class="tech-logo"
+              />
+              <span>Git</span>
+            </div>
+            <div class="tech-item">
+              <img
+                src="../assets/icons/photoshop-logo.png"
+                alt="Adobe Photoshop logo"
+                class="tech-logo"
+              />
+              <span>Photoshop</span>
+            </div>
+            <div class="tech-item">
+              <img
+                src="../assets/icons/illustrator-logo.png"
+                alt="Adobe Illustrator logo"
+                class="tech-logo"
+              />
+              <span>Illustrator</span>
+            </div>
           </div>
         </div>
       </section>
 
+      <!-- FUTURE / CURRENTLY EXPLORING  -->
       <section class="future-projects">
         <div class="container">
           <h2>Currently Exploring</h2>
@@ -172,6 +251,7 @@
         </div>
       </section>
 
+      <!-- CALL TO ACTION  -->
       <section class="projects-cta">
         <div class="container">
           <h2>Interested in My Work?</h2>
@@ -179,11 +259,12 @@
             If you'd like to discuss a project, collaborate, or learn more about
             my work, feel free to get in touch.
           </p>
-          <a href="../pages/contact.html" class="btn btn-primary">Contact Me →</a>
+          <a href="contact.html" class="btn btn-primary">Contact Me →</a>
         </div>
       </section>
     </main>
 
+    <!-- FOOTER  -->
     <footer>
       <div class="container">
         <div class="footer-info">
@@ -203,7 +284,7 @@
               aria-label="GitHub"
             >
               <img
-                src="../assets/images/icons8-github-50.png"
+                src="../assets/icons/github-icon.png"
                 alt="GitHub"
                 class="social-icon-img"
               />
@@ -215,7 +296,7 @@
               aria-label="LinkedIn"
             >
               <img
-                src="../assets/images/icons8-linkedin-50.png"
+                src="../assets/icons/linkedin-icon.png"
                 alt="LinkedIn"
                 class="social-icon-img"
               />

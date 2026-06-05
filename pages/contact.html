@@ -15,9 +15,11 @@
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
+    <!-- This empty div will be filled with the navigation bar by JavaScript -->
     <div id="nav-placeholder"></div>
 
     <main>
+      <!-- PAGE HEADER  -->
       <section class="page-header">
         <div class="container">
           <h1>Get In Touch</h1>
@@ -25,6 +27,7 @@
         </div>
       </section>
 
+      <!-- OPPORTUNITIES  -->
       <section class="contact-intro">
         <div class="container">
           <h2>Opportunities I'm Interested In</h2>
@@ -54,13 +57,16 @@
         </div>
       </section>
 
+      <!-- CONTACT FORM & INFO – two columns on desktop, one column on mobile -->
       <section class="contact-section">
         <div class="container contact-grid">
+          <!-- LEFT SIDE: contact form with JavaScript validation -->
           <div class="contact-form">
             <form id="contactForm" novalidate>
               <div class="form-group">
                 <label for="name">Your Name</label>
                 <input type="text" id="name" name="name" required />
+                <!-- error messages will appear here from script.js -->
                 <div class="error-message" id="nameError"></div>
               </div>
               <div class="form-group">
@@ -78,6 +84,7 @@
                 ></textarea>
                 <div class="error-message" id="messageError"></div>
               </div>
+              <!-- Submit button starts disabled  -->
               <button
                 type="submit"
                 id="submitBtn"
@@ -89,28 +96,57 @@
               <div id="formFeedback" class="form-feedback"></div>
             </form>
           </div>
+
+          <!-- RIGHT SIDE: contact information and social links -->
           <div class="contact-info">
             <div class="info-item">
-              <div class="info-icon">✉️</div>
+              <div class="info-icon">
+                <img
+                  src="../assets/icons/email-icon.png"
+                  alt="Email icon"
+                  class="contact-icon"
+                />
+              </div>
               <div>
-                <strong>Email</strong><br /><a
-                  href="mailto:ben.lai.3368@gmail.com"
+                <strong>Email</strong><br />
+                <a href="mailto:ben.lai.3368@gmail.com"
                   >ben.lai.3368@gmail.com</a
                 >
               </div>
             </div>
+
             <div class="info-item">
-              <div class="info-icon">📍</div>
+              <div class="info-icon">
+                <img
+                  src="../assets/icons/location-icon.png"
+                  alt="Location icon"
+                  class="contact-icon"
+                />
+              </div>
               <div><strong>Location</strong><br />South Africa</div>
             </div>
+
             <div class="info-item">
-              <div class="info-icon">🎓</div>
+              <div class="info-icon">
+                <img
+                  src="../assets/icons/education-icon.png"
+                  alt="Education icon"
+                  class="contact-icon"
+                />
+              </div>
               <div>
                 <strong>Education</strong><br />University of the Witwatersrand
               </div>
             </div>
+
             <div class="info-item">
-              <div class="info-icon">💼</div>
+              <div class="info-icon">
+                <img
+                  src="../assets/icons/focus-icon.png"
+                  alt="Focus icon"
+                  class="contact-icon"
+                />
+              </div>
               <div>
                 <strong>Current Focus</strong><br />Interactive Media & Game
                 Design
@@ -119,35 +155,35 @@
             <div class="social-links">
               <h3>Connect With Me</h3>
               <a
-              href="https://github.com/Skyxiao68"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-            >
-              <img
-                src="../assets/images/icons8-github-50.png"
-                alt="GitHub"
-                class="social-icon-img"
-              />
-            </a>
+                href="https://github.com/Skyxiao68"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <img
+                  src="../assets/icons/github-icon.png"
+                  alt="GitHub"
+                  class="social-icon-img"
+                />
+              </a>
               <a
-              href="https://www.linkedin.com/in/ben-lai-390309206/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              <img
-                src="../assets/images/icons8-linkedin-50.png"
-                alt="LinkedIn"
-                class="social-icon-img"
-              />
-            </a>
-              
+                href="https://www.linkedin.com/in/ben-lai-390309206/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <img
+                  src="../assets/icons/linkedin-icon.png"
+                  alt="LinkedIn"
+                  class="social-icon-img"
+                />
+              </a>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- AVAILABILITY  -->
       <section class="availability">
         <div class="container">
           <h2>Current Availability</h2>
@@ -159,6 +195,7 @@
         </div>
       </section>
 
+      <!-- FAQ –  -->
       <section class="faq">
         <div class="container">
           <h2>Frequently Asked Questions</h2>
@@ -186,6 +223,7 @@
         </div>
       </section>
 
+      <!-- FINAL CALL TO ACTION  -->
       <section class="contact-cta">
         <div class="container">
           <h2>Let's Build Something Together</h2>
@@ -200,6 +238,7 @@
       </section>
     </main>
 
+    <!-- FOOTER  -->
     <footer>
       <div class="container">
         <div class="footer-info">
@@ -219,7 +258,7 @@
               aria-label="GitHub"
             >
               <img
-                src="../assets/images/icons8-github-50.png"
+                src="../assets/icons/github-icon.png"
                 alt="GitHub"
                 class="social-icon-img"
               />
@@ -231,7 +270,7 @@
               aria-label="LinkedIn"
             >
               <img
-                src="../assets/images/icons8-linkedin-50.png"
+                src="../assets/icons/linkedin-icon.png"
                 alt="LinkedIn"
                 class="social-icon-img"
               />
@@ -244,6 +283,7 @@
         </div>
       </div>
     </footer>
+
     <script src="../js/script.js"></script>
   </body>
 </html>

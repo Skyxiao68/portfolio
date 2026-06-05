@@ -1,11 +1,46 @@
-// ---------- PROJECT DATA (8 believable student projects) ----------
+// ---------- PATH HELPERS  ----------
+function isInPagesFolder() {
+  return window.location.pathname.includes("/pages/");
+}
+
+function getNavLinks() {
+  if (isInPagesFolder()) {
+    return {
+      home: "../index.html",
+      projects: "projects.html",
+      about: "about.html",
+      contact: "contact.html",
+    };
+  } else {
+    return {
+      home: "index.html",
+      projects: "pages/projects.html",
+      about: "pages/about.html",
+      contact: "pages/contact.html",
+    };
+  }
+}
+
+function getIconPath(filename) {
+  const prefix = isInPagesFolder() ? "../" : "";
+  return prefix + "assets/icons/" + filename;
+}
+
+function assetPath(filename) {
+  const prefix = isInPagesFolder() ? "../" : "";
+  return prefix + "assets/images/" + filename;
+}
+
+
+// ---------- PROJECT DATA  ----------
+// This array holds all my projects.
 const projectsData = [
   {
     id: 1,
     title: "Personal Portfolio Website",
     description:
       "A responsive portfolio site built with semantic HTML5 and modern CSS. Features clean structure and accessible markup.",
-    image: "assets/images/project-1.jpg",
+    image: assetPath("project-1.jpg"),
     category: "HTML",
     tags: ["HTML", "CSS"],
     liveUrl: "#",
@@ -16,7 +51,7 @@ const projectsData = [
     title: "Interactive Storytelling Experience",
     description:
       "A branching narrative website exploring user choice and nonlinear storytelling. Built with HTML, CSS, and JavaScript.",
-    image: "assets/images/project-2.jpg",
+    image: assetPath("project-2.jpg"),
     category: "JavaScript",
     tags: ["JavaScript", "HTML", "CSS"],
     liveUrl: "#",
@@ -27,7 +62,7 @@ const projectsData = [
     title: "Unity Puzzle Prototype",
     description:
       "A 2D puzzle game prototype with interactive mechanics, level design, and player progression. Made with Unity and C#.",
-    image: "assets/images/project-3.jpg",
+    image: assetPath("project-3.jpg"),
     category: "Game",
     tags: ["Unity", "C#", "Game Design"],
     liveUrl: "#",
@@ -38,7 +73,7 @@ const projectsData = [
     title: "Digital Museum Exhibit",
     description:
       "An interactive web exhibit for a fictional museum, combining multimedia content and user navigation.",
-    image: "assets/images/project-4.jpg",
+    image: assetPath("project-4.jpg"),
     category: "HTML",
     tags: ["HTML", "CSS", "JavaScript"],
     liveUrl: "#",
@@ -48,8 +83,8 @@ const projectsData = [
     id: 5,
     title: "Environmental Recycling Game",
     description:
-      "An arcade‑style game teaching waste sorting and recycling through interactive challenges and decision‑making scenarios. Built with HTML, CSS, and JavaScript.",
-    image: "assets/images/project-5.jpg",
+      "An arcade‑style game teaching waste sorting and recycling through interactive challenges.",
+    image: assetPath("project-5.jpg"),
     category: "Game",
     tags: ["HTML", "CSS", "JavaScript", "Game Design"],
     liveUrl: "#",
@@ -60,7 +95,7 @@ const projectsData = [
     title: "Event Website",
     description:
       "A responsive information site for hobby events, featuring a dynamic schedule and RSVP form.",
-    image: "assets/images/project-6.jpg",
+    image: assetPath("project-6.jpg"),
     category: "HTML",
     tags: ["HTML", "CSS", "JavaScript"],
     liveUrl: "#",
@@ -71,7 +106,7 @@ const projectsData = [
     title: "Mobile UX Prototype",
     description:
       "A high‑fidelity Figma prototype for a fitness app, including user flows, wireframes, and interactive components.",
-    image: "assets/images/project-7.jpg",
+    image: assetPath("project-7.jpg"),
     category: "Design",
     tags: ["Figma", "UX Design", "Wireframing"],
     liveUrl: "#",
@@ -81,8 +116,8 @@ const projectsData = [
     id: 8,
     title: "Interactive Data Visualisation Dashboard",
     description:
-      "A responsive dashboard that visualises sale performance data using Chart.js. Focuses on making complex information accessible and engaging.",
-    image: "assets/images/project-8.jpg",
+      "A responsive dashboard that visualises sales performance data using Chart.js.",
+    image: assetPath("project-8.jpg"),
     category: "JavaScript",
     tags: ["JavaScript", "Chart.js", "HTML", "CSS"],
     liveUrl: "#",
@@ -90,66 +125,72 @@ const projectsData = [
   },
 ];
 
-// ---------- GLOBAL NAVIGATION ----------
-const navHTML = `
-  <nav class="main-nav">
-    <div class="container nav-container">
-      <div class="logo"><a href="index.html">Ben Lai</a></div>
-
-      <!-- Desktop navigation -->
-      <ul class="nav-links desktop-nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="pages/projects.html">Projects</a></li>
-        <li><a href="pages/about.html">About</a></li>
-        <li><a href="pages/contact.html">Contact</a></li>
-      </ul>
-
-      <div class="nav-actions">
-        <button class="theme-toggle" id="themeToggleBtn" aria-label="Dark/Light mode">🌓</button>
-        <button class="hamburger" id="hamburgerBtn" aria-label="Menu" aria-expanded="false">
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-        </button>
+// ---------- NAVIGATION  ----------
+// This function builds the entire navigation bar HTML as a string.
+function getNavHTML() {
+  const links = getNavLinks();
+  return `
+    <nav class="main-nav">
+      <div class="container nav-container">
+        <div class="logo"><a href="${links.home}">Ben Lai</a></div>
+        <ul class="nav-links desktop-nav">
+          <li><a href="${links.home}">Home</a></li>
+          <li><a href="${links.projects}">Projects</a></li>
+          <li><a href="${links.about}">About</a></li>
+          <li><a href="${links.contact}">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="theme-toggle" id="themeToggleBtn" aria-label="Dark/Light mode">
+            <img id="themeIcon" src="assets/icons/sun-icon.png" alt="Light mode" class="theme-icon">
+          </button>
+          <button class="hamburger" id="hamburgerBtn" aria-label="Menu" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
       </div>
-    </div>
-
-    <!-- Mobile menu panel -->
-    <div class="mobile-menu" id="mobileMenu">
-      <ul class="mobile-nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="pages/projects.html">Projects</a></li>
-        <li><a href="pages/about.html">About</a></li>
-        <li><a href="pages/contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-`;
+      <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-links">
+          <li><a href="${links.home}">Home</a></li>
+          <li><a href="${links.projects}">Projects</a></li>
+          <li><a href="${links.about}">About</a></li>
+          <li><a href="${links.contact}">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  `;
+}
 
 function injectNavigation() {
   const placeholder = document.getElementById("nav-placeholder");
-  if (placeholder) placeholder.innerHTML = navHTML;
+  if (placeholder) {
+    placeholder.innerHTML = getNavHTML();
+  }
   setActiveNavLink();
   attachThemeToggle();
 }
 
 function setActiveNavLink() {
-  const currentPath = window.location.pathname;
-  document.querySelectorAll(".nav-links a").forEach((link) => {
-    const href = link.getAttribute("href");
-    if (
-      href === currentPath ||
-      ((currentPath === "/" || currentPath === "index.html") &&
-        href === "index.html")
-    ) {
-      link.classList.add("active");
-    } else {
-      link.classList.remove("active");
-    }
-  });
+  const currentFile = window.location.pathname.split("/").pop() || "index.html";
+  document
+    .querySelectorAll(".nav-links a, .mobile-nav-links a")
+    .forEach((link) => {
+      const href = link.getAttribute("href");
+      if (!href) return;
+      const linkFile = href.split("/").pop();
+      if (
+        linkFile === currentFile ||
+        (currentFile === "" && linkFile === "index.html")
+      ) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
 }
 
-// ---------- THEME ----------
+// ---------- THEME TOGGLE (Light/Dark Mode) ----------
 function initTheme() {
   const saved = localStorage.getItem("theme");
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -170,19 +211,26 @@ function attachThemeToggle() {
   });
 }
 
+
+function updateToggleIcon(theme) {
+  const icon = document.getElementById("themeIcon");
+  if (!icon) return;
+  const iconFile = theme === "dark" ? "sun-icon.png" : "moon-icon.png";
+  icon.src = getIconPath(iconFile);
+  icon.alt = theme === "dark" ? "Switch to light mode" : "Switch to dark mode";
+}
+
+// ---------- MOBILE MENU  ----------
 function setupMobileMenu() {
   const hamburger = document.getElementById("hamburgerBtn");
   const mobileMenu = document.getElementById("mobileMenu");
   if (!hamburger || !mobileMenu) return;
-
   hamburger.addEventListener("click", () => {
-    const isExpanded = hamburger.getAttribute("aria-expanded") === "true";
-    hamburger.setAttribute("aria-expanded", !isExpanded);
+    const expanded = hamburger.getAttribute("aria-expanded") === "true";
+    hamburger.setAttribute("aria-expanded", !expanded);
     mobileMenu.classList.toggle("open");
     document.body.classList.toggle("menu-open");
   });
-
-  // Close menu when a link is clicked
   mobileMenu.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
       mobileMenu.classList.remove("open");
@@ -192,20 +240,17 @@ function setupMobileMenu() {
   });
 }
 
-function updateToggleIcon(theme) {
-  const btn = document.getElementById("themeToggleBtn");
-  if (btn) btn.textContent = theme === "dark" ? "☀️" : "🌓";
-}
-
-// ---------- PROJECT FILTERING ----------
+// ---------- PROJECT FILTERING  ----------
 function renderProjects(filter = "All") {
   const grid = document.getElementById("projects-grid");
   if (!grid) return;
-
-  const filtered =
-    filter === "All"
-      ? projectsData
-      : projectsData.filter((p) => p.category === filter);
+  // Choose which projects to show
+  let filtered;
+  if (filter === "All") {
+    filtered = projectsData;
+  } else {
+    filtered = projectsData.filter((p) => p.category === filter);
+  }
   grid.innerHTML = filtered
     .map(
       (project) => `
@@ -227,20 +272,17 @@ function renderProjects(filter = "All") {
 }
 
 function setupFiltering() {
-  const filterContainer = document.getElementById("filter-buttons");
-  if (!filterContainer) return;
-
+  const container = document.getElementById("filter-buttons");
+  if (!container) return;
   const categories = ["All", ...new Set(projectsData.map((p) => p.category))];
-  filterContainer.innerHTML = categories
+  container.innerHTML = categories
     .map(
       (cat) => `
     <button class="filter-btn ${cat === "All" ? "active" : ""}" data-filter="${cat}">${cat}</button>
   `,
     )
     .join("");
-
   renderProjects("All");
-
   document.querySelectorAll(".filter-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
       const filter = btn.getAttribute("data-filter");
@@ -253,11 +295,10 @@ function setupFiltering() {
   });
 }
 
-// ---------- FEATURED PROJECTS (Home page – 4 projects) ----------
+// ---------- FEATURED PROJECTS (Home page) ----------
 function renderFeaturedProjects() {
   const grid = document.getElementById("featured-grid");
   if (!grid) return;
-
   const featured = projectsData.slice(0, 4);
   grid.innerHTML = featured
     .map(
@@ -283,7 +324,6 @@ function renderFeaturedProjects() {
 function setupContactForm() {
   const form = document.getElementById("contactForm");
   if (!form) return;
-
   const nameInput = document.getElementById("name");
   const emailInput = document.getElementById("email");
   const msgInput = document.getElementById("message");
@@ -293,6 +333,7 @@ function setupContactForm() {
   const msgErr = document.getElementById("messageError");
   const feedback = document.getElementById("formFeedback");
 
+  // Validate name: at least 2 letters, only letters and spaces
   function validateName() {
     const val = nameInput.value.trim();
     const valid = /^[A-Za-z\s]{2,}$/.test(val);
@@ -301,6 +342,7 @@ function setupContactForm() {
       : "At least 2 letters, no numbers/special chars.";
     return valid;
   }
+  // Validate email: must contain @ and a domain
   function validateEmail() {
     const val = emailInput.value.trim();
     const valid = /^\S+@\S+\.\S+$/.test(val);
@@ -309,12 +351,14 @@ function setupContactForm() {
       : "Valid email required (e.g., name@domain.com)";
     return valid;
   }
+  // Validate message: at least 10 characters
   function validateMessage() {
     const val = msgInput.value.trim();
     const valid = val.length >= 10;
     msgErr.textContent = valid ? "" : "Message must be at least 10 characters.";
     return valid;
   }
+  // Enable/disable submit button based on all fields being valid
   function updateSubmit() {
     submitBtn.disabled = !(
       validateName() &&
@@ -345,7 +389,7 @@ function setupContactForm() {
   updateSubmit();
 }
 
-// ---------- BACK TO TOP ----------
+// ---------- BACK TO TOP  ----------
 function setupBackToTop() {
   document.querySelectorAll(".back-to-top").forEach((link) => {
     link.addEventListener("click", (e) => {
@@ -354,34 +398,25 @@ function setupBackToTop() {
     });
   });
 }
+
 function createFloatingTopButton() {
-  // Create button element
   const btn = document.createElement("button");
   btn.id = "scrollToTopBtn";
   btn.innerHTML = "↑";
   btn.setAttribute("aria-label", "Back to top");
   btn.classList.add("scroll-top-btn");
   document.body.appendChild(btn);
-
-  // Initially hidden
   btn.style.display = "none";
-
-  // Show button after scrolling 300px
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      btn.style.display = "flex";
-    } else {
-      btn.style.display = "none";
-    }
+    btn.style.display = window.scrollY > 300 ? "flex" : "none";
   });
-
-  // Scroll to top on click
   btn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 }
 
-// ---------- INIT ----------
+// ---------- INITIALISE ALL ----------
+
 document.addEventListener("DOMContentLoaded", () => {
   injectNavigation();
   initTheme();
